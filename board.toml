@@ -306,7 +306,7 @@ chip_id = "0x8010"
 #   240,092,426,240 bytes = 223.6 GiB; sda queue logical_block_size = 4096
 # The values this table carried before were inherited from the Diting baseline.
 first_lba = 0x2F8A00
-last_lba = 0x3ADF3FA
+last_lba = 0x76753FA
 lba_bytes = 4096
 # The windows of the userdata image are the OS and SystemOS disk images of the IPSW, in
 # that order; the OS profile lists them ([userdata] windows of
