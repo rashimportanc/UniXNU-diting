@@ -153,7 +153,7 @@ jobs:
         env:
           seed: ${{ secrets.UNIXNU_UNIQUE_CHIP_ID }}
         run: |
-          if ! [[ "$seed" =~ ^[0-9a-fA-F]{8}$ ]]; then
+          if ! [[ "$seed" =~ ^[0-9a-fA-F]{8，16}$ ]]; then
             echo 'Set the repository secret UNIXNU_UNIQUE_CHIP_ID: the platform seed of the device, 8 hex digits.' >&2
             exit 1
           fi
@@ -174,7 +174,7 @@ jobs:
               'os': {'uuid': root['os_volume_uuid']},
               'systemos': {'uuid': root['systemos_volume_uuid']},
               # Live 32 GiB GPT-wrapped APFS Data volume UUID on the device.
-              'data': {'uuid': 'B7FBCC5C-CFC2-4AF1-98F5-3D0D394EF2F0'},
+              'data': {'uuid': 'FEDAC400-23AF-41E0-8FE1-EB213F9717FC'},
           }
           Path(sys.argv[1]).write_text(json.dumps(layout, indent=2))
           # The UUIDs are compiled into the kernel (kern_exec selects the volumes by them), so
